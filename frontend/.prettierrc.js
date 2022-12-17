@@ -10,4 +10,7 @@ module.exports = {
   jsxSingleQuote: false, // "" for react props, like in html
   jsxBracketSameLine: false, // pretty JSX
   endOfLine: "lf", // 'lf' for linux, 'crlf' for windows, we need to use 'lf' for git
+  plugins: [
+    "prettier-plugin-tailwindcss" // MUST come last
+  ]
 };
