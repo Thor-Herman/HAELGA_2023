@@ -1,0 +1,13 @@
+.next
+.vercel
+node_modules
+public
+.env
+.eslintrc.json
+.gitignore
+next-env.d.ts
+next.config.js
+package.json
+README.md
+tsconfig.json
+yarn.lock
