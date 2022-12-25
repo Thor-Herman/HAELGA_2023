@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { database } from '../firebaseconfig.js';
 import { ref, onValue } from 'firebase/database';
+import App from '../components/App';
 
 const Home: NextPage = () => {
   const [teams, setTeams] = useState([]);
@@ -31,14 +32,14 @@ const Home: NextPage = () => {
   ));
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
+    <>
       <Head>
         <title>HÆLGA 2023</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">{teamsJSX}</main>
-    </div>
+      <App />
+    </>
   );
 };
 
