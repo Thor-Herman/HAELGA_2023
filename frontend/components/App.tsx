@@ -1,5 +1,5 @@
 import Aurora from './Aurora';
-import TeamBox from './TeamBox';
+import TeamsContainer from './TeamsContainer';
 
 const App = () => {
   return (
@@ -10,12 +10,7 @@ const App = () => {
           <h1 className="py-2 text-5xl">HÆLGA 2023</h1>
           <div className="border-[1px] border-white" />
         </div>
-        <div className="w-full px-4">
-          <div className="absolute h-max border-l-[1px] border-white" />
-          <TeamBox index={1} />
-          <TeamBox index={2} />
-          <TeamBox index={3} />
-        </div>
+        <TeamsContainer />
       </div>
     </section>
   );

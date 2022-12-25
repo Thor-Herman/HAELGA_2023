@@ -1,3 +1,7 @@
+import { useEffect, useRef } from 'react';
+
+const WINNING_SCORE = 10000;
+
 const colorsMapper = [
   'bg-red-500',
   'bg-yellow-500',
@@ -8,13 +12,29 @@ const colorsMapper = [
   'bg-pink-500',
 ];
 
-const TeamBox = ({ index }) => {
+interface Props {
+  index: number;
+  score: number;
+  name: string;
+}
+
+const TeamBox = ({ index, score, name }: Props) => {
+  const colorBar = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const colorBarRef = colorBar.current;
+    if (colorBarRef && colorBarRef.style) colorBarRef.style.width = `${(score / WINNING_SCORE) * 100}%`;
+  }, [score]);
+
   return (
     <div className="mt-2">
-      <p className="pl-1">Teamname</p>
+      <p className="pl-1 md:pl-2">{name}</p>
       <div className="flex items-center">
-        <div className={'mr-1 h-6 min-h-max w-6 sm:h-8 md:h-10 ' + colorsMapper[(index - 1) % colorsMapper.length]} />
-        <p className="text-xs sm:text-sm md:text-base ">Score</p>
+        <div
+          ref={colorBar}
+          className={'mr-1 h-6 min-h-max w-6 sm:h-8 md:h-10 ' + colorsMapper[index % colorsMapper.length]}
+        />
+        <p className="text-xs sm:text-sm md:text-base ">{score}</p>
       </div>
     </div>
   );
