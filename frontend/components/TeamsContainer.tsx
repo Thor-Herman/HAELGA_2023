@@ -33,8 +33,9 @@ const TeamsContainer = () => {
     .map((team, i) => <TeamBox key={i} index={i} score={team.score} name={team.name} />);
 
   return (
-    <div className="w-full px-4">
-      <div className="absolute h-max border-l-[1px] border-white" />
+    <div className="relative mt-4 w-full max-w-6xl px-4 sm:px-8 md:px-12">
+      <div className="absolute h-full border-l-[1px] border-white md:border-l-2" />
+      <div className="absolute right-14 h-full border-r-[2px] border-white border-dotted sm:right-[4.80rem] md:right-24 md:border-l-2" />
       {teamsJSX}
     </div>
   );

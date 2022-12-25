@@ -4,12 +4,12 @@ const WINNING_SCORE = 10000;
 
 const colorsMapper = [
   'bg-red-500',
-  'bg-yellow-500',
+  'bg-blue-600',
   'bg-green-500',
-  'bg-blue-500',
-  'bg-indigo-500',
-  'bg-purple-500',
+  'bg-yellow-500',
   'bg-pink-500',
+  'bg-gray-500',
+  'bg-orange-500',
 ];
 
 interface Props {
@@ -25,6 +25,8 @@ const TeamBox = ({ index, score, name }: Props) => {
     const colorBarRef = colorBar.current;
     if (colorBarRef && colorBarRef.style) colorBarRef.style.width = `${(score / WINNING_SCORE) * 100}%`;
   }, [score]);
+
+  if (score === undefined || !name) return null;
 
   return (
     <div className="mt-2">

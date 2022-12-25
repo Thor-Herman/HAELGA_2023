@@ -12,6 +12,9 @@ const App = () => {
         </div>
         <TeamsContainer />
       </div>
+      <div className="fixed bottom-0 h-36 w-full">
+        <img className="h-full w-full object-cover object-top" src="/snow.png" alt="A snow bank" />
+      </div>
     </section>
   );
 };
