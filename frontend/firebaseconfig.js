@@ -16,17 +16,17 @@ const firebaseConfig = {
   messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
   appId: process.env.FIREBASE_APP_ID,
   measurementId: process.env.FIREBASE_MEASUREMENT_ID,
-  dataBase: `https://${process.env.FIREBASE_DB_NAME}.europe-west1.firebasedatabase.app`,
+  dataBase: `https://haelga-2023-default-rtdb.europe-west1.firebasedatabase.app`,
 };
 
 export const getFirebaseApp = () => {
-  if (!getApps().length) {
+  if (getApps().length < 1) {
     return initializeApp(firebaseConfig);
   }
   return getApp();
 };
 
-export const database = getDatabase(getFirebaseApp());
+export const database = getDatabase(getFirebaseApp(), firebaseConfig.dataBase);
 // export const analytics = getAnalytics(app);
 
 export default getFirebaseApp();
