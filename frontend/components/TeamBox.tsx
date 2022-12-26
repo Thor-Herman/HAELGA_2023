@@ -33,10 +33,19 @@ const TeamBox = ({ index, score, name }: Props) => {
   return (
     <div className="mt-2">
       <div className="flex items-center">
-        <div className="pl-[1px] color-container relative" ref={colorBar}>
-          <p className="pl-1 whitespace-nowrap text-end">{name}</p>
+        <div className="color-container relative pl-[1px]" ref={colorBar}>
+          <p className="whitespace-nowrap pl-1">{name}</p>
           <div className={'h-6 sm:h-8 md:h-10 ' + colorsMapper[index % colorsMapper.length]}>
-            <p className="absolute text-end top-8 text-xs sm:text-sm md:text-base">{formatter.format(score)}</p>
+            {score >= 1000 && (
+              <p className="absolute right-1 top-7 text-end text-xs sm:text-sm md:top-8 md:text-base">
+                {formatter.format(score)}
+              </p>
+            )}
+            {score < 1000 && (
+              <p className="absolute right-[-1.5rem] md:right-[-2rem] top-7 text-end text-xs sm:text-sm md:top-8 md:text-base">
+                {formatter.format(score)}
+              </p>
+            )}
           </div>
         </div>
       </div>
