@@ -1,9 +1,12 @@
 import Aurora from './Aurora';
+import Snow from './Snow';
 import TeamsContainer from './TeamsContainer';
+
 
 const App = () => {
   return (
     <section className="min-h-screen text-white">
+      <Snow />
       <Aurora />
       <div className="flex flex-col items-center pb-36">
         <div className="w-max pt-24 text-center font-bold">
