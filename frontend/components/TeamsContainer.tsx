@@ -35,7 +35,7 @@ const TeamsContainer = () => {
   return (
     <div className="relative mt-4 w-full max-w-6xl px-4 sm:px-8 md:px-12">
       <div className="absolute h-full border-l-[1px] border-white md:border-l-2" />
-      <div className="absolute right-14 h-full border-r-[2px] border-white border-dotted sm:right-[4.80rem] md:right-24 md:border-l-2" />
+      <div className="absolute right-4 h-full border-r-[2px] border-dotted border-red-300 sm:right-8 md:right-12 md:border-l-2" />
       {teamsJSX}
     </div>
   );
