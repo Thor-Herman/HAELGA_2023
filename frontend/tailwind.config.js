@@ -7,6 +7,12 @@ module.exports = {
         dark: {
           DEFAULT: '#131212',
         },
+        lightBlue: {
+          DEFAULT: '#5ABCF3',
+        },
+        green: {
+          DEFAULT: '#44BB6C',
+        },
       },
       fontFamily: {
         sans: ['Outfit', 'serif'],
