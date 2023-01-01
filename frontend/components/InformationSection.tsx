@@ -2,7 +2,7 @@ import TextBox from './TextBox';
 
 const InformationSection = () => {
   return (
-    <section className="mb-32 px-4">
+    <section className="mx-auto mb-32 max-w-xl grid-cols-2 gap-x-4 px-4 md:grid md:max-w-5xl">
       <TextBox title="REGLER" bgColor="bg-lightBlue">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
