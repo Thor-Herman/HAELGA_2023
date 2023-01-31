@@ -3,13 +3,10 @@ import TextBox from './TextBox';
 const InformationSection = () => {
   return (
     <section className="mx-auto mb-32 max-w-xl grid-cols-2 gap-x-4 px-4 md:grid md:max-w-5xl">
-      <TextBox title="REGLER" bgColor="bg-lightBlue">
+      <TextBox title="INFO" bgColor="bg-lightBlue">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-          est laborum.
+          For å sende inn bevis på oppgaver du har fullført, send melding Magnus Hanesand eller Eva Kvalø på slack.
+          Gruppe 1-6 sender til Magnus og gruppe 7-12 sender til Eva.
         </p>
       </TextBox>
       <TextBox title="FREDAG" bgColor="bg-green">
