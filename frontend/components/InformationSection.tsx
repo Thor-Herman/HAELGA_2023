@@ -6,6 +6,7 @@ const InformationSection = () => {
       <TextBox title="INFO" bgColor="bg-lightBlue">
         <p>
           For å sende inn bevis på oppgaver du har fullført, send melding Magnus Hanesand eller Eva Kvalø på slack.
+          <br />
           Gruppe 1-6 sender til Magnus og gruppe 7-12 sender til Eva.
         </p>
       </TextBox>
