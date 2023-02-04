@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-const WINNING_SCORE = 500;
+const WINNING_SCORE = 700;
 
 const colorsMapper = [
   'bg-red-500',
