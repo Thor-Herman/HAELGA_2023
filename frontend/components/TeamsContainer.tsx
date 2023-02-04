@@ -26,7 +26,7 @@ const TeamsContainer = () => {
 
   const teamsJSX = teams
     .sort((a, b) => b.score - a.score)
-    .map((team, i) => <TeamBox key={i} index={i} score={team.score} name={team.name} />);
+    .map((team, i) => <TeamBox key={team.name} index={i} score={team.score} name={team.name} />);
 
   return (
     <div className="relative mt-4 w-full max-w-6xl px-4 sm:px-8 md:px-12">
